@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  wallet:
+    build:
+      context: ./local
+      dockerfile: ./Dockerfile
+    container_name: wallet
+    ports:
+      - "80:80"
+    environment:
+      ENVIRONMENT: "docker"
+      STARTUP_COMMAND_1: "composer install"
+    volumes:
+      - ./:/var/www/html:rw
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      net:
+        aliases:
+          - net_php
+
+networks:
+  net:
+    driver: bridge
+    name: net

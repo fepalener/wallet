@@ -1,0 +1,7 @@
+# JetBrains IDE
+.idea/
+
+# PHPUnit
+.phpunit.cache/
+
+vendor
