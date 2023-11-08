@@ -4,4 +4,4 @@
 
 ### To tun tests ###
 
-`make tests`
+`make run-tests`

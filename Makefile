@@ -20,7 +20,7 @@ stop:
 _prune:
 	docker-compose down -v --remove-orphans
 
-tests: ## run unit tests
+run-tests: ## run unit tests
 	docker exec -i wallet composer tests:integration
 
 php-sh: ## open bash in the PHP container
